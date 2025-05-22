@@ -5,6 +5,7 @@ import pandas as pd
 import seaborn as sns
 import matplotlib.ticker as ticker
 import matplotlib.pyplot as plt
+import json
 ## 0 - pie chart
 ## 1 - column chart
 
@@ -32,12 +33,24 @@ def main():
     for n in range(0, len(list(df["Nazwisko i imiona"]))):
         support[str(list(df["Nazwisko i imiona"])[n])] = list(df["Liczba głosów"])[n]
 
-    # Chart of genders
+    ## Chart of genders
     charts(gender, 'Genders', 0)
-    # Chart of Party affiliation
+    ## Chart of Party affiliation
     charts(party_aff, "Party affinity", 0)
-    # Chart of election support
-    charts(support, "Candidates' Votes", 1, 90)
+    ## Chart of election support
+    charts(support, "Candidates' Votes I Round", 1, 90)
+
+    # Attribution of tentative results in the general forecast of vote counts for two candidates before the second round.)
+    with open("predictions.json", "r", encoding="utf-8") as jsonfile:
+        predictions = json.load(jsonfile)
+    for name in list(support.keys())[2:]:
+        support[list(support.keys())[0]] += int(round(predictions[name][list(support.keys())[0]]*support[name]/100, 0))
+        support[list(support.keys())[1]] += int(round(predictions[name][list(support.keys())[1]] * support[name]/100, 0))
+        support.pop(name)
+
+    ## Chart of predicted votes
+    charts(support, "Predicted Votes II Round", 1)
+    # These results are only predicted, so go vote, Poles!
 
 def charts(dictionary, title, kind_of_chart, rotation=0):
     df = pd.DataFrame(list(dictionary.items()), columns=['col1', 'col2'])
@@ -52,7 +65,7 @@ def charts(dictionary, title, kind_of_chart, rotation=0):
             plt.ylabel('')
             plt.xticks(rotation=rotation)
             plt.gca().yaxis.set_major_formatter(ticker.StrMethodFormatter('{x:,.0f}'))
-            plt.subplots_adjust(bottom=0.25)
+            plt.subplots_adjust(bottom=0.25, left=0.15)
     plt.title(title)
 
     plt.show()
