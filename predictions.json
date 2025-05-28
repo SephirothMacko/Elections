@@ -1,27 +1,32 @@
 {
   "Mentzen": {
-    "Trzaskowski": 20,
-    "Nawrocki": 60,
-    "Niezdecydowani": 20
+    "Trzaskowski": 35,
+    "Nawrocki": 44,
+    "Niezdecydowani": 21
   },
   "Braun": {
-    "Trzaskowski": 10,
-    "Nawrocki": 80,
-    "Niezdecydowani": 10
+    "Trzaskowski": 0,
+    "Nawrocki": 98,
+    "Niezdecydowani": 2
   },
   "Hołownia": {
-    "Trzaskowski": 80,
-    "Nawrocki": 10,
+    "Trzaskowski": 85,
+    "Nawrocki": 5,
     "Niezdecydowani": 10
   },
   "Zandberg": {
-    "Trzaskowski": 90,
-    "Nawrocki": 5,
-    "Niezdecydowani": 5
+    "Trzaskowski": 68,
+    "Nawrocki": 10,
+    "Niezdecydowani": 22
   },
   "Biejat": {
-    "Trzaskowski": 85,
-    "Nawrocki": 5,
+    "Trzaskowski": 98,
+    "Nawrocki": 0,
+    "Niezdecydowani": 2
+  },
+  "Stanowski": {
+    "Trzaskowski": 60,
+    "Nawrocki": 30,
     "Niezdecydowani": 10
   },
   "Senyszyn": {
@@ -29,29 +34,24 @@
     "Nawrocki": 5,
     "Niezdecydowani": 5
   },
-  "Stanowski": {
-    "Trzaskowski": 50,
-    "Nawrocki": 30,
-    "Niezdecydowani": 20
-  },
   "Jakubiak": {
-    "Trzaskowski": 20,
-    "Nawrocki": 70,
+    "Trzaskowski": 10,
+    "Nawrocki": 80,
     "Niezdecydowani": 10
   },
   "Bartoszewicz": {
-    "Trzaskowski": 40,
+    "Trzaskowski": 50,
     "Nawrocki": 40,
-    "Niezdecydowani": 20
+    "Niezdecydowani": 10
   },
   "Maciak": {
-    "Trzaskowski": 30,
-    "Nawrocki": 50,
+    "Trzaskowski": 40,
+    "Nawrocki": 40,
     "Niezdecydowani": 20
   },
   "Woch": {
-    "Trzaskowski": 40,
-    "Nawrocki": 40,
+    "Trzaskowski": 30,
+    "Nawrocki": 50,
     "Niezdecydowani": 20
   }
 }
